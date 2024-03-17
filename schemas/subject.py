@@ -1,0 +1,1 @@
+from typing import Listfrom pydantic import BaseModel, Fieldclass SubjectSchema(BaseModel):    id: int = Field(alias='id')    name: str    topics: List[dict]    class Config:        from_attributes = Trueclass UpdateSubject(BaseModel):    name: str = None    topics: List[int] = None    class Config:        from_attributes = True

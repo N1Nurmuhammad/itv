@@ -1,0 +1,1 @@
+from pydantic import BaseModel, Fieldclass CreateTopic(BaseModel):    question: str    answer: strclass UpdateTopic(BaseModel):    question: str = None    answer: str = Noneclass TopicSchema(BaseModel):    topic_id: int = Field(alias='id')    question: str    answer: str    class Config:        from_attributes = True
